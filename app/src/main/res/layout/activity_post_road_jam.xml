@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:paddingTop="10dp"
+    android:id="@+id/jam_container"
+    tools:context="com.zjy.trafficassist.ui.issue.PostRoadJam">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="选择车道" />
+
+        <com.zjy.trafficassist.widget.tagFlow.TagFlowLayout
+            android:id="@+id/jam_tagFlow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<CheckedTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/tag_bg"-->
+                <!--android:onClick="onToggle"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="对向车道"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/light_black" />-->
+
+            <!--<CheckedTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/tag_bg"-->
+                <!--android:onClick="onToggle"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="同向车道"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/light_black" />-->
+        <!--</LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="详情" />
+
+        <com.zjy.trafficassist.widget.tagFlow.TagFlowLayout
+            android:id="@+id/jam_tagFlow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<CheckedTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/tag_bg"-->
+                <!--android:onClick="onToggle"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="轻微拥堵"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/light_black" />-->
+
+            <!--<CheckedTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/tag_bg"-->
+                <!--android:onClick="onToggle"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="严重拥堵"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/light_black" />-->
+
+            <!--<CheckedTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/tag_bg"-->
+                <!--android:onClick="onToggle"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="几乎不动"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/light_black" />-->
+        <!--</LinearLayout>-->
+
+        <EditText
+            android:id="@+id/road_jam_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/input_box"
+            android:ems="10"
+            android:hint="点击输入详情"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:selectAllOnFocus="false"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="拍照上传" />
+
+        <me.iwf.photopicker.widget.MultiPickResultView
+            android:id="@+id/jam_image_picker"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="地址" />
+
+        <TextView
+            android:id="@+id/jam_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="获取地址中..." />
+    </LinearLayout>
+
+    <Button
+        android:onClick="onCommit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/accent_btn"
+        android:text="完成"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

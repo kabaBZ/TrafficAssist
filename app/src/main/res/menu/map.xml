@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/view_change"
+        android:orderInCategory="100"
+        android:title="切换地图视图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rt_traffic"
+        android:checkable="true"
+        android:checked="false"
+        android:orderInCategory="100"
+        android:title="实时路况"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/rt_cruise"
+        android:checkable="true"
+        android:checked="false"
+        android:orderInCategory="100"
+        android:title="巡航模式"
+        app:showAsAction="never"/>
+
+</menu>

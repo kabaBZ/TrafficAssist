@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjy.trafficassist.ui.PostIssue">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/issue_kind"
+            android:textSize="20sp" />
+
+        <TableRow android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:onClick="onRoadJam"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_issue_road_jam" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/road_jam"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="onRoadConstruction"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_issue_road_construction" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/road_construction"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:onClick="onRoadClose"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_issue_road_close" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/road_close"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="onRoadWater"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_issue_road_water" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/road_water"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
